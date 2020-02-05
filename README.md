@@ -1,4 +1,4 @@
-#alekseykravtchuk.github.io
+# alekseykravtchuk.github.io
 
 # N.67 Домашнее задание ENCYCLO
 
