@@ -1,6 +1,6 @@
 # alekseykravtchuk.github.io
 
-# N.67 Домашнее задание ENCYCLO
+-N.67 Домашнее задание ENCYCLO
 
 Создать проект ENCYCLO (Энциклопедия).
 
@@ -12,3 +12,4 @@
 - Кнопки «Назад», «Вперёд», «Освежить» браузера должны работать как обычно.
 
 Макеты всех видов страниц (для примера) показаны ниже.
+![макет](https://github.com/alekseykravtchuk/alekseykravtchuk.github.io/blob/master/%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D1%8B.PNG)
