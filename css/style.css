@@ -42,6 +42,8 @@ body{
     border-radius: 20px;
     border: 5px solid rgba(0,110,230, .1);
     background-color: white;
+    z-index: 1;
+    transition: 0.4s;
 }
 .list-of-articles a, .list-of-articles h3{
     margin: 1px 5px;
@@ -73,6 +75,8 @@ body{
     border-radius: 20px;
     background-color: white;
     border: 5px solid rgba(0,110,230, .1);
+    z-index: 1;
+    transition: .1s;
 }
 
 .article img, .article p{
@@ -80,6 +84,30 @@ body{
 }
 .main-page {
     font-family: 'Cormorant Infant', 'Arial', serif;
+    font-size: 2em;
 }
 
 ::-webkit-scrollbar { width: 10px; height: 0px;}
+
+@media screen and (max-width : 600px) {
+    .article {
+        font-size:2em;
+    }
+    .list-of-articles {
+        height: 2000px;
+    }
+    .list-of-articles a {
+        min-width: 40%;
+        font-size:2em;
+    }
+    .link-to-list {
+        width: 100%;
+        font-size:2em;
+    }
+    .main-page {
+        font-size: 2em;
+    }
+    .header {
+        font-size: 3em;
+    }
+}
