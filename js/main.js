@@ -1,15 +1,3 @@
-if(!window.location.hash) {
-    document.querySelector('.header').onclick = (e) => {
-        document.title = e.target.innerText;
-        window.location.hash = 'main';
-    };
-    document.querySelector('.link-to-list').onclick = (e) => {
-        document.title = e.target.innerText;
-        window.location.hash = 'list';
-    };
-    window.location.hash = 'main';
-}
-
 //получение контента в соответствии с хэшом в адресной строке
 function getContent() {
     let URLHash = window.location.hash;
@@ -44,16 +32,20 @@ function buildPage(data) {
             linkToList.style.display = 'block';
             articleBox.style.display = 'block';
             listBox.style.display = 'none';
+            articleBox.style.width = '100%';
             break;
         case '#list':
             linkToList.style.display = 'none';
             articleBox.style.display = 'none';
             listBox.style.display = 'flex';
+            listBox.style.width = '100%';
             displayListOfArticles(listOfArticles, listBox);
             break;
         default:
             linkToList.style.display = 'block';
             listBox.style.display = 'block';
+            listBox.style.width = '200px';
+            articleBox.style.width = 'calc(100% - 200px)';
             articleBox.style.display = 'block';
             displayListOfArticles(listOfArticles, listBox);
     }
@@ -113,4 +105,20 @@ function sendRequest(method, url, dataType) {
 }
 
 window.onhashchange = getContent;
-window.onload = getContent;
+
+window.onload = () => {
+    getContent();
+    document.querySelector('.header').onclick = (e) => {
+        document.title = e.target.innerText;
+        window.location.hash = 'main';
+    };
+    document.querySelector('.link-to-list').onclick = (e) => {
+        document.title = e.target.innerText;
+        window.location.hash = 'list';
+    };
+};
+
+//установить хэш, если отсутствует
+if(!window.location.hash) {
+    window.location.hash = 'main';
+}
