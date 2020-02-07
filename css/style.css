@@ -76,6 +76,7 @@ body{
     background-color: white;
     border: 5px solid rgba(0,110,230, .1);
     z-index: 1;
+    transition: .1s;
 }
 
 .article img, .article p{
